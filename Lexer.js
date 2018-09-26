@@ -12,8 +12,4 @@ class Lexer {
         brake;
     }
   }
-
-  isLetter(char) {
-    return char.matchs(/[a-z]|[A-Z]/);
-  }
 }
