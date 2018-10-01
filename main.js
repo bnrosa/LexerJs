@@ -25,8 +25,15 @@ const editor = new Editor();
 
 // Testing string automata
 
+// //Teste lexer on console
+//const filesContent = editor.readfiles("test");
+// console.log(filesContent);
+// let lex = new Lexer(filesContent[1].content);
+// let output = lex.getAll();
+// console.log(output);
+
+//Filestream lexer
 const filesContent = editor.readfiles("test");
-console.log(filesContent);
 filesContent.forEach(file => {
   let lex = new Lexer(file.content);
   output = lex.getAll();
@@ -65,4 +72,3 @@ filesContent.forEach(file => {
     });
   }
 });
-// console.log(output);

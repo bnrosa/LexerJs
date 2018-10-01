@@ -1,22 +1,22 @@
 Success! Tokens identified are:
-Token type: Number| Value: 35| Line: 1
-Token type: Identifier| Value: numero| Line: 1
-Token type: Number| Value: 12| Line: 2
-Token type: Delimiter| Value: {| Line: 2
-Token type: Delimiter| Value: }| Line: 2
-Token type: Number| Value: 13| Line: 2
-Token type: Number| Value: 12.1| Line: 3
-Token type: Number| Value: 123| Line: 4
-Token type: Number| Value: 456| Line: 4
-Token type: Number| Value: 13| Line: 5
-Token type: String| Value: "comida"| Line: 5
-Token type: Number| Value: 12| Line: 5
-Token type: Number| Value: -1| Line: 6
-Token type: Number| Value: -2222| Line: 7
-Token type: Delimiter| Value: ,| Line: 7
-Token type: Number| Value: 3| Line: 7
-Token type: Number| Value: -123.5| Line: 8
-Token type: Number| Value: 231.45| Line: 9
-Token type: String| Value: "dqnwpdnqp"| Line: 10
-Token type: Identifier| Value: musica| Line: 11
-Token type: undefined| Value: ;| Line: 11
+Token type: Number | Value: 35 | Line: 1
+Token type: Identifier | Value: numero | Line: 1
+Token type: Number | Value: 12 | Line: 2
+Token type: Delimiter | Value: { | Line: 2
+Token type: Delimiter | Value: } | Line: 2
+Token type: Number | Value: 13 | Line: 2
+Token type: Number | Value: 12.1 | Line: 3
+Token type: Number | Value: 123 | Line: 4
+Token type: Number | Value: 456 | Line: 4
+Token type: Number | Value: 13 | Line: 5
+Token type: String | Value: "comida" | Line: 5
+Token type: Number | Value: 12 | Line: 5
+Token type: Number | Value: -1 | Line: 6
+Token type: Number | Value: -2222 | Line: 8
+Token type: Delimiter | Value: , | Line: 8
+Token type: Number | Value: 3 | Line: 8
+Token type: Number | Value: -123.5 | Line: 9
+Token type: Number | Value: 231.45 | Line: 10
+Token type: String | Value: "dqnwpdnqp" | Line: 11
+Token type: Identifier | Value: musica | Line: 12
+Token type: undefined | Value: ; | Line: 12

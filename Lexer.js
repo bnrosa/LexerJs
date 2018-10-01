@@ -25,7 +25,7 @@ module.exports = class Lexer {
           this.input.charAt(this.position)
         );
         if (this.position == this.input.length) {
-          if (recognizedOutput.isFinal) {
+          if (recognizedOutput.isFinal && recognizedOutput.type != "Comment") {
             let partial = new Token(
               recognizedOutput.subtype,
               recognizedOutput.value,
@@ -35,9 +35,9 @@ module.exports = class Lexer {
           } else {
             this.errors.push({
               type: "Error",
-              errorMsg: "Incomple input",
-              value: lexeme,
-              line: this.line
+              errorMsg: "Incomple " + recognizedOutput.subtype,
+              value: recognizedOutput.value,
+              line: recognizedOutput.line
             });
           }
         }
@@ -47,12 +47,10 @@ module.exports = class Lexer {
           this.errors.push(recognizedOutput);
         } else if (recognizedOutput.type == "Line Break") {
           this.line++;
-          console.log("LINHA");
-        } else if (
-          recognizedOutput.type == "Blank Space" ||
-          recognizedOutput.type == "Comment"
-        ) {
-        } else if (recognizedOutput.type != "Comment") {
+        } else if (recognizedOutput.type == "Blank Space") {
+        } else if (recognizedOutput.type == "Comment") {
+          this.position--;
+        } else {
           //Recognizes and has no trasition
           this.position--;
           this.tokens.push(recognizedOutput);
@@ -60,8 +58,6 @@ module.exports = class Lexer {
         }
         //Current lexeme becomes next token
         this.currentLexeme = this.input.charAt(this.position);
-        console.log(this.currentLexeme);
-        console.log(this.input.charAt(this.position));
       }
       //Walk one position
     }
@@ -97,31 +93,26 @@ module.exports = class Lexer {
       "extends"
     ]);
     if (reco.isDigit(lexeme.charAt(0)) || lexeme.charAt(0) == "-") {
-      console.log("Number: " + lexeme);
       return this.recognizeNumber(lexeme, this.line, reco);
       //Identifier
     } else if (lexeme.charAt(0) == '"') {
-      console.log("String: " + lexeme);
       return this.reconizeString(lexeme, this.line, reco);
     } else if (reco.isLetter(lexeme.charAt(0))) {
-      console.log("Identifier: " + lexeme);
       return this.reconizeWord(lexeme, this.line, reco);
       //String
-    } else if (lexeme.charAt(0) == "\n") {
+    } else if (lexeme.charAt(0) == "\n" || lexeme.charAt(0) == "\r") {
       return {
         type: "Line Break",
         value: lexeme,
         line: this.line
       };
-    } else if (/\s/.test(lexeme)) {
-      console.log("line, break");
+    } else if (/\s/.test(lexeme.charAt(0))) {
       return {
         type: "Blank Space",
         value: lexeme,
         line: this.line
       };
     } else if (reco.isSymbol(lexeme.charAt(0))) {
-      console.log("Symbol: " + lexeme);
       return this.recognizeSymbol(lexeme, this.line, reco);
     }
     return {
