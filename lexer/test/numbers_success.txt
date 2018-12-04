@@ -1,0 +1,68 @@
+Success! Tokens identified are:
+Token type: Number | Value: 35 | Line: 1
+Token type: Identifier | Value: numero | Line: 1
+Token type: Number | Value: 12 | Line: 2
+Token type: Delimiter | Value: { | Line: 2
+Token type: Delimiter | Value: } | Line: 2
+Token type: Number | Value: 13 | Line: 2
+Token type: Number | Value: 12.1 | Line: 3
+Token type: Number | Value: 123 | Line: 4
+Token type: Relational Operator | Value: = | Line: 4
+Token type: Number | Value: 456 | Line: 4
+Token type: Number | Value: 13 | Line: 5
+Token type: String | Value: "comida" | Line: 5
+Token type: Number | Value: 12 | Line: 5
+Token type: Number | Value: -1 | Line: 6
+Token type: Number | Value: -2222 | Line: 8
+Token type: Delimiter | Value: , | Line: 8
+Token type: Number | Value: 3 | Line: 8
+Token type: Number | Value: -123.5 | Line: 9
+Token type: Number | Value: 231.45 | Line: 10
+Token type: Reserved Word | Value: if | Line: 11
+Token type: Delimiter | Value: ( | Line: 11
+Token type: Identifier | Value: exp | Line: 11
+Token type: Delimiter | Value: ) | Line: 11
+Token type: Reserved Word | Value: then | Line: 11
+Token type: Delimiter | Value: { | Line: 11
+Token type: Identifier | Value: cmd | Line: 12
+Token type: Delimiter | Value: } | Line: 13
+Token type: Reserved Word | Value: else | Line: 13
+Token type: Delimiter | Value: { | Line: 13
+Token type: Delimiter | Value: } | Line: 15
+Token type: String | Value: "dqnwpdnqp" | Line: 16
+Token type: Identifier | Value: musica | Line: 17
+Token type: undefined | Value: ; | Line: 17
+Success! Tokens identified are:
+Token type: Number | Value: 35 | Line: 1
+Token type: Identifier | Value: numero | Line: 1
+Token type: Number | Value: 12 | Line: 2
+Token type: Delimiter | Value: { | Line: 2
+Token type: Delimiter | Value: } | Line: 2
+Token type: Number | Value: 13 | Line: 2
+Token type: Number | Value: 12.1 | Line: 3
+Token type: Number | Value: 123 | Line: 4
+Token type: Relational Operator | Value: = | Line: 4
+Token type: Number | Value: 456 | Line: 4
+Token type: Number | Value: 13 | Line: 5
+Token type: String | Value: "comida" | Line: 5
+Token type: Number | Value: 12 | Line: 5
+Token type: Number | Value: -1 | Line: 6
+Token type: Number | Value: -2222 | Line: 8
+Token type: Delimiter | Value: , | Line: 8
+Token type: Number | Value: 3 | Line: 8
+Token type: Number | Value: -123.5 | Line: 9
+Token type: Number | Value: 231.45 | Line: 10
+Token type: Reserved Word | Value: if | Line: 11
+Token type: Delimiter | Value: ( | Line: 11
+Token type: Identifier | Value: exp | Line: 11
+Token type: Delimiter | Value: ) | Line: 11
+Token type: Reserved Word | Value: then | Line: 11
+Token type: Delimiter | Value: { | Line: 11
+Token type: Identifier | Value: cmd | Line: 12
+Token type: Delimiter | Value: } | Line: 13
+Token type: Reserved Word | Value: else | Line: 13
+Token type: Delimiter | Value: { | Line: 13
+Token type: Delimiter | Value: } | Line: 15
+Token type: String | Value: "dqnwpdnqp" | Line: 16
+Token type: Identifier | Value: musica | Line: 17
+Token type: undefined | Value: ; | Line: 17

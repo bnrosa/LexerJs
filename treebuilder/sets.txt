@@ -1,0 +1,256 @@
+Firsts
+
+Start	const, class
+MoreClasses	ε, class
+ClassDeclaration	class
+ClassIdentification	identifier
+ClassHeritage	extends, ε
+ClassBody	variables, method, ε
+ClassAttributes	variables, ε
+ClassMethods	ε, method
+ConstantDeclaration	const, ε
+Constants	type
+MoreConstants	,, ;
+NewDeclaration	type, ε
+ConstAttribution	identifier
+Value	number, true, false, cadeCaracters
+VariableDeclaration	variables, ε
+Variable	type, identifier
+Variable2	identifier, type, ε
+MoreVariables	type, identifier, ε
+Name	identifier, ε
+MoreNames	,, ;
+MethodDeclaration	method
+MoreMethods	method, ε
+ParameterDeclaration	ε, type, identifier
+ParameterDeclaration2	ε, type, identifier
+Type	type, identifier
+MoreParameters	,, ε
+ArrayVerification	[, ε
+DoubleArray	[, ε
+ArrayIndex	-, !, ++, --, *, /, +, ε, number, (, identifier, true
+Return	return
+Return1	identifier, number, true, false, cadeCaracters
+Commands	ε, return, if, while, read, identifier, write, ++, --
+IfStatement	if
+ElseStatement	else, ε
+WhileStatement	while
+Attribution	identifier, ++, --
+Verif	=, ++, --, (
+Increment	++, --
+NormalAttribution2	=, ++, --
+NormalAttribution3	cadeCaracters, -, !, ++, --, *, /, +, relationalOperator, ||, &&, ε, number, (, identifier, true
+Expression	-, !, ++, --, *, /, +, relationalOperator, ||, &&, ε, number, (, identifier, true
+RelationalExp	relationalOperator, ||, &&, ε
+LogicalExp	||, &&, ε
+AddExp	-, !, ++, --, *, /, +, ε, number, (, identifier, true
+D	+, -, ε
+MultExp	-, !, ++, --, *, /, ε, number, (, identifier, true
+E	*, /, ε
+NegExp	-, !, ++, --, number, (, identifier, true
+G	--, ++, ε
+ExpValue	number, (, identifier, true
+Param2	ε, (
+Complement	(
+Param	ε, cadeCaracters, -, !, ++, --, *, /, +, relationalOperator, ||, &&, ,, number, (, identifier, true
+MoreParam	,, ε
+ObrigatoryParam	cadeCaracters, -, !, ++, --, *, /, +, relationalOperator, ||, &&, ,, ε, number, (, identifier, true
+ReadStatement	read
+Reading1	identifier
+MoreReadings	,, ε
+WriteStatement	write
+Writing1	identifier
+MoreWritings	,, ε
+Attr	., ε
+
+
+Follow
+Follow sets
+#	Sets
+Start	-|
+MoreClasses	-|
+ClassDeclaration	class, -|
+ClassIdentification	class, -|
+ClassHeritage	{
+ClassBody	}
+ClassAttributes	method, }
+ClassMethods	}
+ConstantDeclaration	class
+Constants	}
+MoreConstants	}
+NewDeclaration	}
+ConstAttribution	,, ;
+Value	,, ;
+VariableDeclaration	method, }, return, if, while, read, identifier, write, ++, --
+Variable	}
+Variable2	}
+MoreVariables	}
+Name	type, identifier, }
+MoreNames	type, identifier, }
+MethodDeclaration	}
+MoreMethods	}
+ParameterDeclaration	)
+ParameterDeclaration2	)
+Type	identifier
+MoreParameters	)
+ArrayVerification	,, ;, ), ., =, ++, --, (, +, -, ], relationalOperator, ||, &&
+DoubleArray	,, ;, ), ., =, ++, --, (, +, -, ], relationalOperator, ||, &&
+ArrayIndex	]
+Return	;
+Return1	;
+Commands	}
+IfStatement	return, if, while, read, identifier, write, ++, --, }
+ElseStatement	return, if, while, read, identifier, write, ++, --, }
+WhileStatement	return, if, while, read, identifier, write, ++, --, }
+Attribution	;
+Verif	;
+Increment	identifier, ;
+NormalAttribution2	;
+NormalAttribution3	;
+Expression	), ;, ,
+RelationalExp	), ;, ,
+LogicalExp	), ;, ,
+AddExp	], relationalOperator, ||, &&, ), ;, ,
+D	], relationalOperator, ||, &&, ), ;, ,
+MultExp	+, -, ], relationalOperator, ||, &&, ), ;, ,
+E	+, -, ], relationalOperator, ||, &&, ), ;, ,
+NegExp	+, -, ], relationalOperator, ||, &&, ), ;, ,
+G	+, -, ], relationalOperator, ||, &&, ), ;, ,
+ExpValue	+, -, ], relationalOperator, ||, &&, ), ;, --, ++, ,
+Param2	+, -, ], relationalOperator, ||, &&, ), ;, --, ++, ,
+Complement	;, +, -, ], relationalOperator, ||, &&, ), --, ++, ,
+Param	)
+MoreParam	)
+ObrigatoryParam	)
+ReadStatement	return, if, while, read, identifier, write, ++, --, }
+Reading1	)
+MoreReadings	)
+WriteStatement	return, if, while, read, identifier, write, ++, --, }
+Writing1	)
+MoreWritings	)
+Attr	;, =, ++, --, (, +, -, ], relationalOperator, ||, &&, ), ,
+
+Predicting Sets(?)
+Predict sets
+#	Sets
+1	const, class
+2	class
+3	-|
+4	class
+5	identifier
+6	extends
+7	{
+8	variables, method, }
+9	variables, method, }
+10	method
+11	}
+12	const
+13	class
+14	type
+15	,
+16	;
+17	type
+18	}
+19	identifier
+20	number
+21	true
+22	false
+23	cadeCaracters
+24	variables
+25	method, }, return, if, while, read, identifier, write, ++, --
+26	type
+27	identifier
+28	identifier, type, }
+29	type, identifier
+30	}
+31	identifier
+32	type, identifier, }
+33	,
+34	;
+35	method
+36	method
+37	}
+38	type, identifier, )
+39	)
+40	type, identifier
+41	)
+42	type
+43	identifier
+44	,
+45	)
+46	[
+47	,, ;, ), ., =, ++, --, (, +, -, ], relationalOperator, ||, &&
+48	[
+49	,, ;, ), ., =, ++, --, (, +, -, ], relationalOperator, ||, &&
+50	-, !, ++, --, *, /, +, number, (, identifier, true, ]
+51	return
+52	identifier
+53	number, true, false, cadeCaracters
+54	if
+55	}
+56	while
+57	read
+58	identifier, ++, --
+59	write
+60	return
+61	if
+62	else
+63	return, if, while, read, identifier, write, ++, --, }
+64	while
+65	++, --
+66	identifier
+67	=, ++, --
+68	(
+69	++
+70	--
+71	=
+72	++, --
+73	-, !, ++, --, *, /, +, relationalOperator, ||, &&, number, (, identifier, true, ;
+74	cadeCaracters
+75	-, !, ++, --, *, /, +, number, (, identifier, true, relationalOperator, ||, &&, ), ;, ,
+76	relationalOperator
+77	||, &&, ), ;, ,
+78	||
+79	&&
+80	), ;, ,
+81	-, !, ++, --, *, /, number, (, identifier, true, +, ], relationalOperator, ||, &&, ), ;, ,
+82	+
+83	-
+84	], relationalOperator, ||, &&, ), ;, ,
+85	-, !, ++, --, number, (, identifier, true
+86	*, /, +, -, ], relationalOperator, ||, &&, ), ;, ,
+87	*
+88	/
+89	+, -, ], relationalOperator, ||, &&, ), ;, ,
+90	-
+91	number, (, identifier, true
+92	!
+93	++
+94	--
+95	--
+96	++
+97	+, -, ], relationalOperator, ||, &&, ), ;, ,
+98	number
+99	(
+100	identifier
+101	true
+102	(
+103	+, -, ], relationalOperator, ||, &&, ), ;, --, ++, ,
+104	(
+105	)
+106	-, !, ++, --, *, /, +, relationalOperator, ||, &&, number, (, identifier, true, ,, )
+107	cadeCaracters
+108	,
+109	)
+110	-, !, ++, --, *, /, +, relationalOperator, ||, &&, number, (, identifier, true, ,, )
+111	cadeCaracters
+112	read
+113	identifier
+114	,
+115	)
+116	write
+117	identifier
+118	,
+119	)
+120	.
+121	;, =, ++, --, (, +, -, ], relationalOperator, ||, &&, ), ,

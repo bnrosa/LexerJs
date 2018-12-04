@@ -1,0 +1,8 @@
+Errors:
+Error Invalid symbol: : . Line: 1
+Error Invalid symbol: : . Line: 2
+Error Invalid symbol: : . Line: 2
+Error Invalid symbol: : . Line: 2
+Error Invalid symbol: : . Line: 3
+Error Invalid symbol: : . Line: 3
+Error Invalid symbol: : . Line: 3

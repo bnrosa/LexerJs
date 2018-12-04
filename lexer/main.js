@@ -26,9 +26,9 @@ const editor = new Editor();
 // Testing string automata
 
 // //Teste lexer on console
-//const filesContent = editor.readfiles("test");
-// console.log(filesContent);
-// let lex = new Lexer(filesContent[1].content);
+// const filesContent = editor.readfiles("test");
+// //console.log(filesContent);
+// let lex = new Lexer(filesContent[2].content);
 // let output = lex.getAll();
 // console.log(output);
 

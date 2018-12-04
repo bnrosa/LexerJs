@@ -1,0 +1,30 @@
+const{
+	int a = 4, b = 5, c = 6;
+	float d = 7.5, e = 8.5;
+}
+class teste extends teste2{
+
+	variables{
+		string s1;
+		string s2;
+		string s3;	
+	}
+	method int metodo1(){
+		return a;	
+	}
+	method void method2(){
+		f = b + e;
+	}
+	method float method3(){
+		return d;
+	}
+	method void method4(){
+		if(b == 5) then { 
+			b++;
+		} else {
+			a++;
+		}
+	}
+
+
+}

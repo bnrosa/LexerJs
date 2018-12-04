@@ -1,0 +1,121 @@
+Start -> ConstantDeclaration ClassDeclaration MoreClasses 
+MoreClasses -> ClassDeclaration MoreClasses 
+MoreClasses -> ε 
+ClassDeclaration -> class ClassIdentification 
+ClassIdentification -> identifier ClassHeritage { ClassBody } 
+ClassHeritage -> extends identifier 
+ClassHeritage -> ε 
+ClassBody -> ClassAttributes ClassMethods 
+ClassAttributes -> VariableDeclaration 
+ClassMethods -> MethodDeclaration 
+ClassMethods -> ε 
+ConstantDeclaration -> const { Constants } 
+ConstantDeclaration -> ε 
+Constants -> type ConstAttribution MoreConstants 
+MoreConstants -> , ConstAttribution MoreConstants 
+MoreConstants -> ; NewDeclaration 
+NewDeclaration -> Constants 
+NewDeclaration -> ε 
+ConstAttribution -> identifier = Value 
+Value -> number 
+Value -> true 
+Value -> false 
+Value -> cadeCaracters 
+VariableDeclaration -> variables { Variable } 
+VariableDeclaration -> ε 
+Variable -> type Variable2 
+Variable -> identifier Variable2 
+Variable2 -> Name MoreVariables 
+MoreVariables -> Variable 
+MoreVariables -> ε 
+Name -> identifier ArrayVerification MoreNames 
+Name -> ε 
+MoreNames -> , Name 
+MoreNames -> ; 
+MethodDeclaration -> method type identifier ( ParameterDeclaration ) { VariableDeclaration Commands } MoreMethods 
+MoreMethods -> MethodDeclaration 
+MoreMethods -> ε 
+ParameterDeclaration -> ParameterDeclaration2 
+ParameterDeclaration -> ε 
+ParameterDeclaration2 -> Type identifier ArrayVerification MoreParameters 
+ParameterDeclaration2 -> ε 
+Type -> type 
+Type -> identifier 
+MoreParameters -> , ParameterDeclaration2 
+MoreParameters -> ε 
+ArrayVerification -> [ ArrayIndex ] DoubleArray 
+ArrayVerification -> ε 
+DoubleArray -> [ ArrayIndex ] 
+DoubleArray -> ε 
+ArrayIndex -> AddExp 
+Return -> return Return1 
+Return1 -> identifier ArrayVerification 
+Return1 -> Value 
+Commands -> IfStatement Commands 
+Commands -> ε 
+Commands -> WhileStatement Commands 
+Commands -> ReadStatement Commands 
+Commands -> Attribution ; Commands 
+Commands -> WriteStatement Commands 
+Commands -> Return ; 
+IfStatement -> if ( Expression ) then { Commands } ElseStatement 
+ElseStatement -> else { Commands } 
+ElseStatement -> ε 
+WhileStatement -> while ( Expression ) { Commands } 
+Attribution -> Increment identifier ArrayVerification Attr 
+Attribution -> identifier ArrayVerification Attr Verif 
+Verif -> NormalAttribution2 
+Verif -> Complement 
+Increment -> ++ 
+Increment -> -- 
+NormalAttribution2 -> = NormalAttribution3 
+NormalAttribution2 -> Increment 
+NormalAttribution3 -> Expression 
+NormalAttribution3 -> cadeCaracters 
+Expression -> AddExp RelationalExp 
+RelationalExp -> relationalOperator AddExp LogicalExp 
+RelationalExp -> LogicalExp 
+LogicalExp -> || Expression 
+LogicalExp -> && Expression 
+LogicalExp -> ε 
+AddExp -> MultExp D 
+D -> + AddExp 
+D -> - AddExp 
+D -> ε 
+MultExp -> NegExp 
+MultExp -> E 
+E -> * MultExp 
+E -> / MultExp 
+E -> ε 
+NegExp -> - ExpValue 
+NegExp -> ExpValue G 
+NegExp -> ! ExpValue 
+NegExp -> ++ ExpValue 
+NegExp -> -- ExpValue 
+G -> -- 
+G -> ++ 
+G -> ε 
+ExpValue -> number 
+ExpValue -> ( Expression ) 
+ExpValue -> identifier ArrayVerification Attr Param2 
+ExpValue -> true false 
+Param2 -> Complement 
+Param2 -> ε 
+Complement -> ( Param ) 
+Param -> ε 
+Param -> Expression MoreParam 
+Param -> cadeCaracters MoreParam 
+MoreParam -> , ObrigatoryParam 
+MoreParam -> ε 
+ObrigatoryParam -> Expression MoreParam 
+ObrigatoryParam -> cadeCaracters MoreParam 
+ReadStatement -> read ( Reading1 ) ; 
+Reading1 -> identifier ArrayVerification Attr MoreReadings 
+MoreReadings -> , Reading1 
+MoreReadings -> ε 
+WriteStatement -> write ( Writing1 ) ; 
+Writing1 -> identifier ArrayVerification Attr MoreWritings 
+MoreWritings -> , Writing1 
+MoreWritings -> ε 
+Attr -> . identifier ArrayVerification Attr 
+Attr -> ε 

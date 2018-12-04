@@ -1,13 +1,18 @@
 35 numero
 12{}13
 12.1
-123 456
+123=456
 13"comida"12
 -1
 /*-1.5*/
 -2222,3
 -123.5
 231.45
+if(exp) then {
+    cmd
+} else {
+
+}
 //pao
 "dqnwpdnqp"
 musica;
